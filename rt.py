@@ -5,9 +5,9 @@ df = pd.read_csv('zadanie-rekrutacyjne.csv')
 list1 = df.loc[:].values.tolist()
 
 
-w_h_ration = [x[0]/x[1] for x in list1]
+w_h_ratio = [x[0]/x[1] for x in list1]
 
-weighted_list = list(zip(w_h_ration, list(list1)))
+weighted_list = list(zip(w_h_ratio, list(list1)))
 
 weighted_list = sorted(weighted_list, key=lambda x:x[0], reverse=True)
 print(weighted_list)
